@@ -1,0 +1,32 @@
+{
+  "name": "www_memy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyri41/WWW_memy.git"
+  },
+  "author": "Grzegorz Kwiatkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyri41/WWW_memy/issues"
+  },
+  "homepage": "https://github.com/tyri41/WWW_memy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "npm-watch": "^0.6.0",
+    "sqlite3": "^4.2.0",
+    "typescript": "^3.9.5",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.12",
+    "@types/sqlite3": "^3.1.6",
+    "mocha": "^7.2.0",
+    "ts-node": "^8.10.2"
+  }
+}

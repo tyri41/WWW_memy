@@ -1,0 +1,16 @@
+html
+    head
+        title= title
+    style
+        include style.css
+    body
+        h1= message
+        img(src="https://steamuserimages-a.akamaihd.net/ugc/836952465890717038/DDF9056F9D428D5D7C5ACFD2217D082B996A858F/")
+        h1="Meme list"
+        ul
+            each meme in memes
+                li
+                    div
+                        a(href="meme/" + meme.id) #{meme.name}
+                        p  price is #{meme.price}
+                    img(src=meme.url)

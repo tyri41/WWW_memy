@@ -1,0 +1,21 @@
+html
+    head
+        title= title
+    style
+        include style.css
+    body
+        h1= meme.name
+        img(class = 'meme_img', src=meme.url)
+        h1="History of this meme's prices"
+        table
+            thead
+                th prices
+            each price in meme.history
+                tr
+                    th #{price}
+        h2="Give it a new price"
+        form(method='POST' action="/meme/" + meme.id)
+          div.form-group
+            label(for='price') New price: 
+            input#nprice.form-control(type='text', placeholder='new price for this meme' name='price')
+          button.btn.btn-primary(type='submit') Set

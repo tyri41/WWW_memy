@@ -1,0 +1,15 @@
+img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+
+body {
+    background-color: green;
+}
+
+.meme_img {
+    width: 700px;
+    height: 700px;
+    object-fit: contain;
+}
