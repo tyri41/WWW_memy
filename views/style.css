@@ -13,3 +13,7 @@ body {
     height: 700px;
     object-fit: contain;
 }
+
+li {
+    padding: 30px;
+}

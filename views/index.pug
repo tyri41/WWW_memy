@@ -6,6 +6,16 @@ html
     body
         h1= message
         img(src="https://steamuserimages-a.akamaihd.net/ugc/836952465890717038/DDF9056F9D428D5D7C5ACFD2217D082B996A858F/")
+        form(method='POST' action="/login", headers:{withCredentials:true})
+          div.form-group
+            input(type='hidden', name = '_csrf', value='{{csrfToken}}')
+            label(for='price') Username: 
+            input(type='text',  name='name')
+          div
+            label(for='price') password: 
+            input(type='text',  name='pass')
+          button.btn.btn-primary(type='submit') Login
+          a(href="/logout") Logout
         h1="Meme list"
         ul
             each meme in memes
@@ -14,3 +24,4 @@ html
                         a(href="meme/" + meme.id) #{meme.name}
                         p  price is #{meme.price}
                     img(src=meme.url)
+        h2="You have seen " + count + " pages this session"

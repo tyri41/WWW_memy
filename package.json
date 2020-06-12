@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "npx ts-node serwer.ts",
+    "app-init": "npx ts-node serwer.ts -n"
   },
   "repository": {
     "type": "git",
@@ -17,11 +19,16 @@
   },
   "homepage": "https://github.com/tyri41/WWW_memy#readme",
   "dependencies": {
+    "better-sqlite3": "^7.1.0",
+    "connect-sqlite3": "^0.9.11",
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "npm-watch": "^0.6.0",
+    "pug": "^3.0.0",
     "sqlite3": "^4.2.0",
-    "typescript": "^3.9.5",
-    "pug": "^3.0.0"
+    "typescript": "^3.9.5"
   },
   "devDependencies": {
     "@types/node": "^14.0.12",

@@ -14,8 +14,12 @@ html
                 tr
                     th #{price}
         h2="Give it a new price"
-        form(method='POST' action="/meme/" + meme.id)
+        form(method='POST' action="/meme/" + meme.id, headers:{withCredentials:true})
           div.form-group
+            input(type='hidden', name = '_csrf', value='{{csrfToken}}')
             label(for='price') New price: 
-            input#nprice.form-control(type='text', placeholder='new price for this meme' name='price')
+            input(type='text', placeholder='new price for this meme' name='price')
           button.btn.btn-primary(type='submit') Set
+        
+        h2="You have seen " + count + " pages this session"
+        a(href="/") go back
